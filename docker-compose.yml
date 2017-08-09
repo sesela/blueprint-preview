@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  blueprint-preview:
+    restart: always
+    build: .
+    ports:
+    - "10080:8088"
+    volumes:
+    - /srv/docker/blueprint-preview/apidocs:/workspace/apidocs
+    - /srv/docker/blueprint-preview/published:/workspace/published
+
